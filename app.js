@@ -2,7 +2,8 @@ const divinput = document.querySelector(".div-input")
 const input = document.querySelector("#input")
 const button1 = document.querySelector("#button1")
  const content = document.querySelector(".content")
- const footer = document.querySelector(".footer")
+ const footer = document.querySelector("#work")
+ const alertt = document.querySelector("#alert")
 
 
  var sayaç = 0 ;
@@ -12,7 +13,7 @@ const button1 = document.querySelector("#button1")
  function todo() {
      if(input.value != " "){
 
-    // sayaç++;
+    sayaç++;
      
 
      var text = document.createElement("p");
@@ -35,19 +36,22 @@ const button1 = document.querySelector("#button1")
 
      deletet.addEventListener("click" , clear);
      function clear(){
+         sayaç--;
+         footer.innerHTML = `Work Pending : ${sayaç}`
          content.removeChild(text);
-        //  sayaç--;
+         
          
          
      }
-    //  footer.closest.removeChild(text2);
-    //  var text2 =document.createElement("div") 
-    //  text2.innerText = sayaç
-    //  footer.appendChild(text2);
+    
+     
+     footer.innerHTML =  `Work Pending : ${sayaç}`
+     
 
      
     }
 
+   
      
     
     
